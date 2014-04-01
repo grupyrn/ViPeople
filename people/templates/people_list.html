@@ -3,10 +3,10 @@
 <a href="{% url 'people_create' %}">Adicionar Pessoa</a>
 <hr/>
 {% for people in people_list %}
-	Nome: {{ people.name }} <br/>
-	Telefone: {{ people.phone }} <br/>
-	Email: {{ people.email }} <br/>
-	<a href="{{ people.get_delete_url }}">Remover</a>
-	<a href="{{ people.get_update_url }}">Alterar</a>
-	<hr/>
+  Nome: {{ people.name }} <br/>
+  Telefone: {{ people.phone }} <br/>
+  Email: {{ people.email }} <br/>
+  <a href="{{ people.get_delete_url }}">Remover</a>
+  <a href="{{ people.get_update_url }}">Alterar</a>
+  <hr/>
 {% endfor %}

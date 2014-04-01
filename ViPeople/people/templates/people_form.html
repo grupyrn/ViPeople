@@ -1,0 +1,17 @@
+<h3>
+  {% if form.instance.pk %}
+    Atualizar: "{{ object }}"
+  {% else %}
+    Adição de Pessoas
+  {% endif %}
+</h3>
+
+<a href="{% url 'people_list' %}">Listagem de Pessoas</a>
+<hr/>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Salvar</button>
+  <a href="{% url 'people_list' %}">Cancelar</a>
+</form>

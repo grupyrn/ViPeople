@@ -1,0 +1,13 @@
+<h3>
+  Remover: "{{ object }}"
+</h3>
+
+<a href="{% url 'people_list' %}">Listagem de Pessoas</a>
+<hr/>
+
+<form method="POST">
+  {% csrf_token %}
+  <p>Você tem certeza que deseja remover esta Pessoa?</p>
+  <button type="submit">Remover</button>
+  <a href="{% url 'people_list' %}">Cancelar</a>
+</form>
